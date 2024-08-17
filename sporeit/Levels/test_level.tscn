@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0e4nvie67ixq"]
+
+[ext_resource type="Script" path="res://Levels/test_level.gd" id="1_bihoy"]
+[ext_resource type="PackedScene" uid="uid://daxshewlgea0n" path="res://Levels/Backgrounds/background.tscn" id="2_vj0hf"]
+[ext_resource type="PackedScene" uid="uid://b58l8l7oh1x7i" path="res://Characters/Enemies/fu_nat.tscn" id="3_lslgi"]
+[ext_resource type="PackedScene" uid="uid://c4w5fwwe1x0h5" path="res://Characters/qubey.tscn" id="4_4pxbp"]
+
+[node name="TestLevel" type="Node2D"]
+script = ExtResource("1_bihoy")
+
+[node name="Background" parent="." instance=ExtResource("2_vj0hf")]
+
+[node name="Qubey" parent="." instance=ExtResource("4_4pxbp")]
+position = Vector2(81, 377)
+
+[node name="FuNat" parent="." instance=ExtResource("3_lslgi")]
+position = Vector2(766, 156)

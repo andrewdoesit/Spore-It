@@ -1,0 +1,29 @@
+
+SPORE IT
+
+This game is a game about being a spore on a journey to grow
+the biggest mycelium network on the planet.
+Might just be a mini game but would like to go through all stages of life
+Fly through the air as a spore and collect other spores to have a Spore score
+if you hit a object then you loose your spores 
+
+PLAYER CHARACTERS
+	- Qubey - the P. Cubensis
+	- 
+
+LEVELS?
+	-Have a floppy bird type without gravity for flying in the wind
+		Have a spore collection and if a hit occurs you lose your mates 
+		I would like to do this by creating Images instead of tile maps
+
+POWERUPS
+	- Other Spores 
+	- Maybe a wind gust that takes you on a path?? 
+
+OBSTACLES
+	- ANYTHING NOT GOOD FOR GERMINATION One sky, One ground, One middle
+	- A blade of grass and you get eaten by a horse limiting your poo colonization
+	- 
+ENEMYS
+	- Tricoderma - Tric-D
+	- Fungus Gnats - 

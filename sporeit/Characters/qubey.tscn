@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://c4w5fwwe1x0h5"]
+
+[ext_resource type="Script" path="res://Characters/qubey.gd" id="1_5mw1n"]
+[ext_resource type="Texture2D" uid="uid://ccuvty4p8gfw8" path="res://Art/Characters/SporeConcept.png" id="1_lpbtb"]
+[ext_resource type="Script" path="res://Characters/Components/PlayerMovementComponent.gd" id="2_kftw4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pxyax"]
+radius = 31.1084
+height = 128.183
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6ixxm"]
+radius = 26.1017
+height = 70.531
+
+[node name="Qubey" type="CharacterBody2D" groups=["Player"]]
+script = ExtResource("1_5mw1n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.122)
+texture = ExtResource("1_lpbtb")
+
+[node name="CompPlayerMove" type="Node" parent="." node_paths=PackedStringArray("character")]
+script = ExtResource("2_kftw4")
+character = NodePath("..")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(35, -11)
+rotation = 1.54064
+shape = SubResource("CapsuleShape2D_pxyax")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -9)
+rotation = 0.598581
+shape = SubResource("CapsuleShape2D_6ixxm")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
