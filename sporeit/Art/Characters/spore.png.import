@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccuvty4p8gfw8"
-path="res://.godot/imported/SporeConcept.png-195bb2d931fd934d9e43c0446f4b1a6e.ctex"
+uid="uid://bsdbfdihb3rcp"
+path="res://.godot/imported/spore.png-f6438d19f4ae19be1510145e9bd46f9a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Characters/SporeConcept.png"
-dest_files=["res://.godot/imported/SporeConcept.png-195bb2d931fd934d9e43c0446f4b1a6e.ctex"]
+source_file="res://Art/Characters/spore.png"
+dest_files=["res://.godot/imported/spore.png-f6438d19f4ae19be1510145e9bd46f9a.ctex"]
 
 [params]
 

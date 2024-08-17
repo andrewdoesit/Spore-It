@@ -29,3 +29,8 @@ shape = SubResource("CapsuleShape2D_7ms1x")
 position = Vector2(-1, -3)
 rotation = 1.56595
 shape = SubResource("CapsuleShape2D_vv5de")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

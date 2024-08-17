@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://knl0l1ik4qin"]
+
+[ext_resource type="Texture2D" uid="uid://x01xm65hxx8q" path="res://Art/sporeitem_128.png" id="1_k4hqb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_voxfb"]
+radius = 40.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qb8qf"]
+radius = 39.0
+
+[node name="SporeItem" type="CharacterBody2D" groups=["SporeItem"]]
+collision_layer = 3
+collision_mask = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4.72964, 5.16435)
+scale = Vector2(0.212555, 0.213614)
+texture = ExtResource("1_k4hqb")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(5, 5)
+shape = SubResource("CircleShape2D_voxfb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5, 4)
+shape = SubResource("CircleShape2D_qb8qf")

@@ -1,0 +1,65 @@
+[gd_scene load_steps=10 format=3 uid="uid://ywovjije2se6"]
+
+[ext_resource type="Script" path="res://Levels/Cartoons/beginning_story.gd" id="1_bnpsx"]
+[ext_resource type="Texture2D" uid="uid://dlsmf4a84kh0h" path="res://Art/Background/clouds_prama.png" id="1_u0ky5"]
+[ext_resource type="Texture2D" uid="uid://bol6w58dvisi5" path="res://Art/Background/lightning.png" id="2_luk67"]
+[ext_resource type="Texture2D" uid="uid://dqf7xojm2gb5v" path="res://Art/Background/poop.png" id="4_83pk3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mn1y2"]
+atlas = ExtResource("2_luk67")
+region = Rect2(0, 0, 314, 531)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xh2i4"]
+atlas = ExtResource("2_luk67")
+region = Rect2(314, 0, 314, 531)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4815n"]
+atlas = ExtResource("2_luk67")
+region = Rect2(0, 531, 314, 531)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rb4ju"]
+atlas = ExtResource("2_luk67")
+region = Rect2(314, 531, 314, 531)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kbmvf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mn1y2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xh2i4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4815n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rb4ju")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="BeginningStory" type="CanvasLayer"]
+script = ExtResource("1_bnpsx")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 646.0
+texture = ExtResource("1_u0ky5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(303, 310)
+scale = Vector2(0.41879, 0.41879)
+sprite_frames = SubResource("SpriteFrames_kbmvf")
+frame = 1
+frame_progress = 0.788886
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(575, 324)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(91, 550)
+scale = Vector2(0.247462, 0.247462)
+texture = ExtResource("4_83pk3")
