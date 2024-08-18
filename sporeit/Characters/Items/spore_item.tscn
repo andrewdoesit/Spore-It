@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://knl0l1ik4qin"]
 
-[ext_resource type="Texture2D" uid="uid://x01xm65hxx8q" path="res://Art/sporeitem_128.png" id="1_k4hqb"]
+[ext_resource type="Texture2D" uid="uid://x01xm65hxx8q" path="res://Art/Items/sporeitem_128.png" id="1_k4hqb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_voxfb"]
 radius = 40.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c4w5fwwe1x0h5"]
+[gd_scene load_steps=12 format=3 uid="uid://c4w5fwwe1x0h5"]
 
 [ext_resource type="Script" path="res://Characters/qubey.gd" id="1_5mw1n"]
 [ext_resource type="Texture2D" uid="uid://ish43r8k5c18" path="res://Art/Characters/spore1.png" id="2_bej81"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://bsdbfdihb3rcp" path="res://Art/Characters/spore.png" id="2_lqjvf"]
 [ext_resource type="Texture2D" uid="uid://vde28vlm43aj" path="res://Art/Characters/spore2.png" id="4_a7ltx"]
 [ext_resource type="Texture2D" uid="uid://cpmbcjp0hku37" path="res://Art/Characters/spore3.png" id="5_vunwl"]
+[ext_resource type="AudioStream" uid="uid://darj6ensrxfkm" path="res://Art/SoundFX/wee.ogg" id="7_0rep4"]
+[ext_resource type="PackedScene" uid="uid://dughf74omx64y" path="res://Characters/player_ui.tscn" id="8_dhmb5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uifw3"]
 animations = [{
@@ -43,6 +45,8 @@ position = Vector2(-3, 1)
 scale = Vector2(0.38835, 0.38835)
 sprite_frames = SubResource("SpriteFrames_uifw3")
 animation = &"move_foward"
+frame = 3
+frame_progress = 1.0
 
 [node name="CompPlayerMove" type="Node" parent="." node_paths=PackedStringArray("character")]
 script = ExtResource("2_kftw4")
@@ -63,5 +67,16 @@ shape = SubResource("CapsuleShape2D_pxyax")
 position = Vector2(6, 3)
 rotation = 1.05856
 shape = SubResource("CapsuleShape2D_6ixxm")
+
+[node name="WeeSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_0rep4")
+volume_db = -3.748
+pitch_scale = 2.66
+
+[node name="Control" parent="." instance=ExtResource("8_dhmb5")]
+offset_left = -118.0
+offset_top = -203.0
+offset_right = -78.0
+offset_bottom = -163.0
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

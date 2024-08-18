@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=3 uid="uid://dughf74omx64y"]
+
+[ext_resource type="Texture2D" uid="uid://x01xm65hxx8q" path="res://Art/Items/sporeitem_128.png" id="1_57g7f"]
+[ext_resource type="FontFile" uid="uid://c8erb0048qeim" path="res://Art/Fonts/Kaph-Regular.otf" id="2_aao6w"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 4.0
+offset_top = 2.0
+offset_right = 44.0
+offset_bottom = 42.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(29, 55)
+scale = Vector2(0.268555, 0.288889)
+texture = ExtResource("1_57g7f")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 54.0
+offset_top = 24.0
+offset_right = 115.0
+offset_bottom = 82.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0.756863, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_aao6w")
+theme_override_font_sizes/font_size = 50
+text = "=="
+
+[node name="Title" type="Label" parent="."]
+offset_left = -4.0
+offset_top = -2.0
+offset_right = 223.0
+offset_bottom = 29.0
+theme_override_colors/font_color = Color(0.892605, 0.557755, 0.512892, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_aao6w")
+theme_override_font_sizes/font_size = 25
+text = "SPORE SCORE"
+
+[node name="SporeScore" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 61.0
+offset_top = 33.0
+offset_right = 167.0
+offset_bottom = 91.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.938569, 0.418741, 0.632924, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_aao6w")
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1

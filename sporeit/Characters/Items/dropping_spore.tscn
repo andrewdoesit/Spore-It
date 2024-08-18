@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://cga6rbwgu0k16"]
+
+[ext_resource type="Texture2D" uid="uid://vb78fve0ywp8" path="res://Art/Items/sporeitem_64.png" id="1_jyqn0"]
+[ext_resource type="Script" path="res://Characters/Items/dropping_spore.gd" id="1_lhuob"]
+[ext_resource type="Script" path="res://Characters/Components/CharacterGravityComponent.gd" id="2_tbrsi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i5t8s"]
+radius = 29.0172
+
+[node name="DroppingSpore" type="CharacterBody2D"]
+slide_on_ceiling = false
+floor_constant_speed = true
+script = ExtResource("1_lhuob")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_jyqn0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_i5t8s")
+disabled = true
+
+[node name="CompCharactersGravity" type="Node" parent="." node_paths=PackedStringArray("character")]
+script = ExtResource("2_tbrsi")
+character = NodePath("..")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
