@@ -1,11 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://djs5eg213ud6m"]
+[gd_scene load_steps=5 format=3 uid="uid://djs5eg213ud6m"]
 
 [ext_resource type="Script" path="res://Levels/sunny_day.gd" id="1_257jo"]
 [ext_resource type="Texture2D" uid="uid://qmbejfucftp3" path="res://Art/Background/mushroomScreen.png" id="1_wh026"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7bd1m"]
-radius = 17.9999
-height = 445.989
+[ext_resource type="FontFile" uid="uid://c8erb0048qeim" path="res://Art/Fonts/Kaph-Regular.otf" id="3_pwj1d"]
+[ext_resource type="Texture2D" uid="uid://vb78fve0ywp8" path="res://Art/Items/sporeitem_64.png" id="4_ojduc"]
 
 [node name="SunnyDay" type="Node2D"]
 script = ExtResource("1_257jo")
@@ -16,19 +14,44 @@ offset_bottom = 665.0
 texture = ExtResource("1_wh026")
 expand_mode = 1
 
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(586, 219)
-rotation = 1.57312
-shape = SubResource("CapsuleShape2D_7bd1m")
-
 [node name="Start" type="Button" parent="."]
-offset_left = 914.0
-offset_top = 283.0
-offset_right = 1121.0
-offset_bottom = 379.0
-theme_override_font_sizes/font_size = 64
-text = "Start"
+offset_left = 142.0
+offset_top = 41.0
+offset_right = 210.0
+offset_bottom = 137.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_pwj1d")
+theme_override_font_sizes/font_size = 36
+icon = ExtResource("4_ojduc")
+
+[node name="SporeCounterLabel" type="Label" parent="."]
+offset_left = 23.0
+offset_top = 289.0
+offset_right = 396.0
+offset_bottom = 330.0
+theme_override_colors/font_color = Color(0.937255, 0.419608, 0.929412, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_pwj1d")
+theme_override_font_sizes/font_size = 28
+text = "SPORES DROPPED =="
+
+[node name="SporeCount" type="Label" parent="."]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 400.0
+offset_top = 290.0
+offset_right = 542.0
+offset_bottom = 326.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.937255, 0.419608, 0.929412, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_pwj1d")
+theme_override_font_sizes/font_size = 30
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]

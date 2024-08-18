@@ -7,6 +7,10 @@ extends Node
 @export var vertical_speed : float = 300
 @export var forward_speed : float = 50
 
+#TODO: use this for the user input it might make our animations easier
+func _input(event: InputEvent) -> void:
+	pass
+	
 # NOTE: Having Velocity has a physics effect 
 # If you change to position it will give it a different effect 
 # TODO: Try with both once we have a level
