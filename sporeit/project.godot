@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="SporeIt"
-run/main_scene="res://Levels/sunny_day.tscn"
+run/main_scene="res://Levels/Menus/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/bg_color=Color(0.0142752, 0.0142752, 0.0142752, 1)
 boot_splash/image="res://TheMooseBear.png"

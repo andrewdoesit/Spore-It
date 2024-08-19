@@ -17,6 +17,7 @@ scale = Vector2(0.268555, 0.288889)
 texture = ExtResource("1_57g7f")
 
 [node name="Label" type="Label" parent="."]
+layout_mode = 0
 offset_left = 54.0
 offset_top = 24.0
 offset_right = 115.0
@@ -30,6 +31,7 @@ theme_override_font_sizes/font_size = 50
 text = "=="
 
 [node name="Title" type="Label" parent="."]
+layout_mode = 0
 offset_left = -4.0
 offset_top = -2.0
 offset_right = 223.0

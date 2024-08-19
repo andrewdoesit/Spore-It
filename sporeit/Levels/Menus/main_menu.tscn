@@ -1,0 +1,77 @@
+[gd_scene load_steps=3 format=3 uid="uid://kgkjtigrf8r"]
+
+[ext_resource type="FontFile" uid="uid://c8erb0048qeim" path="res://Art/Fonts/Kaph-Regular.otf" id="1_0bo25"]
+[ext_resource type="Script" path="res://Levels/Menus/main_menu.gd" id="1_6xudf"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6xudf")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 646.0
+color = Color(0.937255, 0.419608, 0.929412, 1)
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 415.0
+offset_top = 307.0
+offset_right = 683.0
+offset_bottom = 389.0
+theme_override_colors/font_color = Color(0, 0.756863, 0, 1)
+theme_override_fonts/font = ExtResource("1_0bo25")
+theme_override_font_sizes/font_size = 64
+text = "START"
+
+[node name="CreditsButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 372.0
+offset_top = 431.0
+offset_right = 724.0
+offset_bottom = 513.0
+theme_override_colors/font_color = Color(0, 0.756863, 0, 1)
+theme_override_fonts/font = ExtResource("1_0bo25")
+theme_override_font_sizes/font_size = 64
+text = "Credits"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 104.0
+offset_right = 910.0
+offset_bottom = 246.0
+theme_override_colors/font_color = Color(0.447059, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_0bo25")
+theme_override_font_sizes/font_size = 124
+text = "SPORE-IT"
+metadata/_edit_group_ = true
+
+[node name="Label2" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = 7.0
+offset_right = 754.0
+offset_bottom = 144.0
+theme_override_colors/font_color = Color(0.199332, 0.474739, 0.428569, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_0bo25")
+theme_override_font_sizes/font_size = 126
+text = "SPORE-IT"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 372.0
+offset_right = 304.0
+offset_bottom = 441.0
+text = "TestLevel"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

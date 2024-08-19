@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://Characters/Components/CharacterGravityComponent.gd" id="2_tbrsi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i5t8s"]
-radius = 29.0172
+radius = 16.0312
 
 [node name="DroppingSpore" type="CharacterBody2D"]
 slide_on_ceiling = false
@@ -13,6 +13,7 @@ floor_constant_speed = true
 script = ExtResource("1_lhuob")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.533898, 0.533898)
 texture = ExtResource("1_jyqn0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
